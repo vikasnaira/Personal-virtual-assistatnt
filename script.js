@@ -9,8 +9,7 @@ const sound = new Audio("img/sound.mp3");
 let transcript = ""; 
 
 // Sahi API Endpoint URL (Aapne string ke andar backticks lagaye the, jo galat tha)
-const API_KEY = '';
-
+const API_KEY = window.localStorage.getItem('NEXBOT_GEMINI_KEY') || '';
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${API_KEY}`;
 
 // API FETCH FUNCTION
