@@ -17,7 +17,7 @@ body{
     background-color:black;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("img/bg.png.png");
+    background-image: url("img/bg.png");
 
     align-items: center;
 }
@@ -149,9 +149,9 @@ body{
   align-items:flex-end;
 }
 #btn {
-  width: 10em;
+  width:fit-content;
+  text-wrap: nowrap;
   position: relative;
-  height: 3.5em;
   border: 3px ridge #149CEA;
   outline: none;
   background-color: transparent;
@@ -226,6 +226,8 @@ body{
   
   #btn {
     width: 8em;
+    position: absolute;
+    top:10%;
     height: 3em;
     font-size: 14px;
   }
@@ -233,7 +235,6 @@ body{
   #btn::after, #btn::before {
     height: 30%;
   }
-  
 }
 
       
@@ -272,6 +273,11 @@ body{
     .loader {
     right: 0;
     } 
+    #btn{
+        font-size:1rem;
+        height:8vh;
+      width:20vh;  
+    }
 }
 @media (min-width:1024px) and (max-width:1440px) {
 
@@ -289,4 +295,12 @@ body{
         height:8vh;
       width:25vh;  
     }
-}
+  }
+    @media (min-width:1440px) and (max-width:2560px) {
+      #btn{
+         width: 20vw;
+         height: 10vh;
+         font-size: 2rem;
+      }
+
+    }
